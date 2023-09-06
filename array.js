@@ -1,31 +1,31 @@
-// var arr=[1,3,5,0,5,1,2,4]
+var arr=[1,3,5,0,5,1,2,4]
 
-// var k = 8
-// let temp=0;
-// let count = 1;
-// function subsequenceRearrangement(arr, k)
-// {
-//    for(let i=0;i<k-1;i++){
-//         for(let j=i+1;j<k;j++){
+var k = 8
+let temp=0;
+let count = 1;
+function subsequenceRearrangement(arr, k)
+{
+   for(let i=0;i<k-1;i++){
+        for(let j=i+1;j<k;j++){
 
-//             if(arr[i]>arr[j]){
-//                 temp=arr[i]
-//                 arr[i]=arr[j]
-//                 arr[j]=temp
-//              }
-//         }
+            if(arr[i]>arr[j]){
+                temp=arr[i]
+                arr[i]=arr[j]
+                arr[j]=temp
+             }
+        }
 
-//         if(arr[i]!=arr[i+1]){
-//             count+=1
+        if(arr[i]!=arr[i+1]){
+            count+=1
 
-//              }
+             }
 
-//              console.log(count)
+             console.log(count)
 
-//    }
+   }
 
-//    console.log(arr)
-// }
+   console.log(arr)
+}
 
 // subsequenceRearrangement(arr, k)
 
@@ -67,12 +67,15 @@
 // console.log(newarr," line 67");
 
 
-const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-arr.length=0;
-console.log(arr)
+// const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// arr.length=0;
+//console.log(arr)
+// let a =10+"5"
+// console.log(a);
+//console.log(0.1+0.2===0.3)
 
+console.log(3 + +"3")
 
-console.log(0.1+0.2===0.3)
-
-
-
+function addition(){
+    
+}

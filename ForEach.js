@@ -10,3 +10,5 @@ const staffsDetails = [
     return val.id=i
   })
   console.log(staffsDetails)
+
+
