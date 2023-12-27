@@ -1,18 +1,29 @@
-var ashok = "dada"
+var ashok = "dada   "
 
-
-function sample(){
-    // let m =5
-    // ashok = "good boy"
-  var  ashok = "good boy"
-return ashok
-}
-
+// var b= ashok.substring(0,5)
+console.log(ashok)
+ashok.trim()
 console.log(ashok)
 
-console.log(sample())   //4 
+var arr = [1,2,3,4]
 
-console.log(ashok)
+var c = arr.slice(0)
+
+// console.log(b)
+console.log(c)
+
+// function sample(){
+//     // let m =5
+//     ashok = "good boy"
+//   var  ashok = "good boy"
+// return ashok
+// }
+
+// console.log(ashok)
+
+// console.log(sample())   //4 
+
+// console.log(ashok)
 
 // var num=1
 // console.log(num)
@@ -51,3 +62,12 @@ console.log(ashok)
 // }
 
 // console.log("stack [8]");
+
+
+// primitive & Non-primitive
+
+
+// 1.number 
+// 2.boolean
+// 3.string
+// 4.

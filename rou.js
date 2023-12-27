@@ -77,14 +77,25 @@
 // if(true){
 //     var a = b = 5;
 // }
-(function(){
-    var a = b = 3;
-  })();
+// (function(){
+//     var a = b = 3;
+//   })();
   
 
 
-console.log("b defined? " + ( typeof(b) !== 'undefined'));
-console.log("a defined? is" + ( typeof(a) !== 'undefined'));
+// console.log("b defined? " + ( typeof(b) !== 'undefined'));
+// console.log("a defined? is" + ( typeof(a) !== 'undefined'));
 
 
-ghtdfvghcdvvg
+// const dif= null
+// if(dif==undefined){
+// function x(y){
+//   console.log(y)
+// }
+// }
+
+// x(10)
+
+
+
+
