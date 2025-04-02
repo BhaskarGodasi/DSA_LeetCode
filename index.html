@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html> -->
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -15,5 +15,95 @@
     <button type="submit">Submit</button>
 </form>
     <script src="array.js"></script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Carousel</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .carousel-container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+            border: 2px solid #ddd;
+        }
+
+        .carousel-wrapper {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-item {
+            min-width: 200px;
+            height: 150px;
+            margin: 10px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            background-color: gold;
+        }
+
+        .btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .prev { left: 10px; }
+        .next { right: 10px; }
+    </style>
+</head>
+<body>
+
+    <div class="carousel-container">
+        <div class="carousel-wrapper" id="carousel">
+            <div class="carousel-item" style="background-image: url('https://via.placeholder.com/200x150/FF5733');"></div>
+            <div class="carousel-item" style="background-image: url('https://via.placeholder.com/200x150/33FF57');"></div>
+            <div class="carousel-item" style="background-image: url('https://via.placeholder.com/200x150/5733FF');"></div>
+            <div class="carousel-item" style="background-image: url('https://via.placeholder.com/200x150/FF33A6');"></div>
+            <div class="carousel-item" style="background-image: url('https://via.placeholder.com/200x150/A633FF');"></div>
+        </div>
+        <button class="btn prev" onclick="moveSlide(-1)">❮</button>
+        <button class="btn next" onclick="moveSlide(1)">❯</button>
+    </div>
+
+    <script>
+        const carousel = document.getElementById('carousel');
+        const itemWidth = document.querySelector('.carousel-item').offsetWidth + 20; // Item width + margin
+        let currentIndex = 0;
+
+        function moveSlide(direction) {
+            const totalItems = document.querySelectorAll('.carousel-item').length;
+            const maxIndex = totalItems - Math.floor(document.querySelector('.carousel-container').offsetWidth / itemWidth);
+
+            if (direction === 1 && currentIndex < maxIndex) {
+                currentIndex++;
+            } else if (direction === -1 && currentIndex > 0) {
+                currentIndex--;
+            } else {
+                return;
+            }
+
+            carousel.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+        }
+    </script>
+
 </body>
 </html>
